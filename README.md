@@ -22,7 +22,6 @@ app.Directories = "TinyMCE";
 
 In your application.htm.ashx file, add the following lines:
 ```javascript
-<!-- tinyMCE switch -->
 <!-- Tiny MCE -->
 <script type="text/javascript" src="~TinyMCE/tinyMCEV4/js/tinymce_4.1.9/tinymce.min.js"></script>
 ```
