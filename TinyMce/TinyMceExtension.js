@@ -7,6 +7,12 @@ Aspectize.Extend("TinyMCEv4", {
         var initProperties = {};
         var editorCreated = false;
 
+        if (!elem.aasClose) {
+            elem.aasClose = function () {
+
+                tinyMCE.remove('#' + elem.id);
+            };
+        }
         var ctrlInfo = elem.aasControlInfo;
 
         ctrlInfo.aasBeforeModalChange = function (sender) {
