@@ -7,6 +7,8 @@ Global.TinyMCEService = {
       
    UnloadTinyMCE: function (controlName) {
 
+       if (Aspectize.Can && Aspectize.Can('aasClose')) return;
+
        function unloadTinyMCE() {
            if (typeof (tinyMCE) !== 'undefined') {
                tinymce.each(tinyMCE.editors, function (e) {

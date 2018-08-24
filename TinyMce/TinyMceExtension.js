@@ -7,6 +7,14 @@ Aspectize.Extend("TinyMCEv4", {
         var initProperties = {};
         var editorCreated = false;
 
+        if (Aspectize.Can && Aspectize.Can('aasClose')) {
+
+            elem.aasClose = function () {
+
+                tinyMCE.remove('#' + elem.id);
+            };
+        }
+
         var ctrlInfo = elem.aasControlInfo;
 
         ctrlInfo.aasBeforeModalChange = function (sender) {
@@ -26,6 +34,8 @@ Aspectize.Extend("TinyMCEv4", {
         };
 
         ctrlInfo.aasAfterModalViewChange = function (sender) {
+
+            if (!editorCreated) { loadTinyMCE(elem); editorCreated = true; }
         };
 
         function loadTinyMCE(elem) {
@@ -39,21 +49,22 @@ Aspectize.Extend("TinyMCEv4", {
                 Aspectize.UiExtensions.ChangeProperty(elem, 'Value', content);
             }
 
+            var editMode = Aspectize.UiExtensions.GetProperty(elem, 'EditMode');
             var options = {
                 language: 'fr_FR',
                 selector: '#' + elem.id,
                 allow_script_urls: true,
                 remove_trailing_brs: Aspectize.UiExtensions.GetProperty(elem, 'RemoveTrailingBrs'),
-                visual_table_class: Aspectize.UiExtensions.GetProperty(elem, 'EditMode') ? 'mce-item-table' : 'my-custom-class',
+                visual_table_class: editMode ? 'mce-item-table' : 'my-custom-class',
                 relative_urls: Aspectize.UiExtensions.GetProperty(elem, 'RelativeUrls'),
                 remove_script_host: Aspectize.UiExtensions.GetProperty(elem, 'RelativeUrls'),
                 convert_urls: Aspectize.UiExtensions.GetProperty(elem, 'RelativeUrls'),
                 inline: Aspectize.UiExtensions.GetProperty(elem, 'Inline'),
                 plugins: ["spellchecker pagebreak layer save directionality noneditable visualchars nonbreaking template advlist autolink lists link image charmap print preview anchor searchreplace visualblocks code fullscreen insertdatetime media table contextmenu paste textcolor" + ((Aspectize.UiExtensions.GetProperty(elem, 'WordCount')) ? ' wordcount' : '')],
-                readonly: !Aspectize.UiExtensions.GetProperty(elem, 'EditMode'),
+                readonly: !editMode,
                 valid_elements: '*[*]',
                 toolbar_items_size: 'small',
-                toolbar: (!Aspectize.UiExtensions.GetProperty(elem, 'EditMode')) ? false : 'bold italic underline strikethrough | removeformat | alignleft aligncenter alignright alignjustify | styleselect formatselect fontselect fontsizeselect | cut copy paste pastetext pasteword | searchreplace | bullist numlist | outdent indent blockquote | undo redo | link unlink ' + ((Aspectize.UiExtensions.GetProperty(elem, 'CustomLink')) ? 'customlinkbutton ' : '') + ((Aspectize.UiExtensions.GetProperty(elem, 'CustomImage')) ? 'customimagebutton ' : '') + 'image ' + ((Aspectize.UiExtensions.GetProperty(elem, 'DisableIFrame')) ? ' ' : 'media ') + 'code | anchor | forecolor backcolor | table | hr | selectall visualblocks | sub sup | charmap | preview print',
+                toolbar: (!editMode) ? false : 'bold italic underline strikethrough | removeformat | alignleft aligncenter alignright alignjustify | styleselect formatselect fontselect fontsizeselect | cut copy paste pastetext pasteword | searchreplace | bullist numlist | outdent indent blockquote | undo redo | link unlink ' + ((Aspectize.UiExtensions.GetProperty(elem, 'CustomLink')) ? 'customlinkbutton ' : '') + ((Aspectize.UiExtensions.GetProperty(elem, 'CustomImage')) ? 'customimagebutton ' : '') + 'image ' + ((Aspectize.UiExtensions.GetProperty(elem, 'DisableIFrame')) ? ' ' : 'media ') + 'code | anchor | forecolor backcolor | table | hr | selectall visualblocks | sub sup | charmap | preview print',
                 setup: function (editor) {
 
                     thisEditor = editor;
@@ -102,7 +113,7 @@ Aspectize.Extend("TinyMCEv4", {
                 }
             };
 
-            if ((!Aspectize.UiExtensions.GetProperty(elem, 'StatusBar') && !Aspectize.UiExtensions.GetProperty(elem, 'WordCount')) || !Aspectize.UiExtensions.GetProperty(elem, 'EditMode')) options.statusbar = false;
+            if ((!Aspectize.UiExtensions.GetProperty(elem, 'StatusBar') && !Aspectize.UiExtensions.GetProperty(elem, 'WordCount')) || !editMode) options.statusbar = false;
             if (!Aspectize.UiExtensions.GetProperty(elem, 'MenuBar')) options.menubar = false;
 
             tinyMCE.init(options);
