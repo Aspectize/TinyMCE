@@ -1,6 +1,6 @@
 ﻿
 Aspectize.Extend("TinyMCEv4", {
-    Properties: { EditMode: true, Value: '', CustomImage: false, CustomLink: false, RelativeUrls: false, Inline: false, MenuBar: false, StatusBar: false, WordCount: false, DisableIFrame: false, RemoveTrailingBrs: true },
+    Properties: { EditMode: true, Value: '', CustomImage: '', CustomLink: '', RelativeUrls: false, Inline: false, MenuBar: false, StatusBar: false, WordCount: false, DisableIFrame: false, RemoveTrailingBrs: true },
     Events: ['OnCustomImage', 'OnCustomLink'],
     Init: function (elem) {
 
@@ -68,10 +68,14 @@ Aspectize.Extend("TinyMCEv4", {
                 setup: function (editor) {
 
                     thisEditor = editor;
-
-                    if (Aspectize.UiExtensions.GetProperty(elem, 'CustomImage')) {
+                    var customImage = Aspectize.UiExtensions.GetProperty(elem, 'CustomImage');
+                    if (customImage) {
+                        var customImageTitle = 'Custom Image';
+                        if (typeof customImage === 'string') {
+                            customImageTitle = customImage;
+                        }
                         editor.addButton('customimagebutton', {
-                            title: 'Custom Image',
+                            title: customImageTitle,
                             image: '../Applications/TinyMce/images/Image16Add.png',
                             onclick: function () {
                                 var customImageLink = {
@@ -87,10 +91,15 @@ Aspectize.Extend("TinyMCEv4", {
                             }
                         });
                     }
+                    var customLink = Aspectize.UiExtensions.GetProperty(elem, 'CustomLink');
 
-                    if (Aspectize.UiExtensions.GetProperty(elem, 'CustomLink')) {
+                    if (customLink) {
+                        var customLinkTitle = 'Custom Link';
+                        if (typeof customLink === 'string') {
+                            customLinkTitle = customLink;
+                        }
                         editor.addButton('customlinkbutton', {
-                            title: 'Custom Link',
+                            title: customLinkTitle,
                             image: '../Applications/TinyMce/images/DynamicLinkAdd.png',
                             onclick: function () {
                                 var linkText = editor.selection.getContent();
