@@ -43,10 +43,15 @@ Aspectize.Extend("TinyMCEv4", {
             var thisEditor = null;
 
             function notifyChange() {
+                if (tinyMCE) {
+                    var element = tinyMCE.get(elem.id);
 
-                var content = tinyMCE.get(elem.id).getContent();
-                aasOldValue = content;
-                Aspectize.UiExtensions.ChangeProperty(elem, 'Value', content);
+                    if (element) {
+                        var content = element.getContent();
+                        aasOldValue = content;
+                        Aspectize.UiExtensions.ChangeProperty(elem, 'Value', content);
+                    }
+                }
             }
 
             var editMode = Aspectize.UiExtensions.GetProperty(elem, 'EditMode');
