@@ -65,7 +65,7 @@ Aspectize.Extend("TinyMCEv4", {
                 remove_script_host: Aspectize.UiExtensions.GetProperty(elem, 'RelativeUrls'),
                 convert_urls: Aspectize.UiExtensions.GetProperty(elem, 'RelativeUrls'),
                 inline: Aspectize.UiExtensions.GetProperty(elem, 'Inline'),
-                plugins: ["spellchecker pagebreak layer save directionality noneditable visualchars nonbreaking template advlist autolink lists link image charmap print preview anchor searchreplace visualblocks code fullscreen insertdatetime media table contextmenu paste textcolor" + ((Aspectize.UiExtensions.GetProperty(elem, 'WordCount')) ? ' wordcount' : '')],
+                plugins: ["spellchecker pagebreak save directionality noneditable visualchars nonbreaking template advlist autolink lists link image charmap print preview anchor searchreplace visualblocks code fullscreen insertdatetime media table contextmenu paste textcolor" + ((Aspectize.UiExtensions.GetProperty(elem, 'WordCount')) ? ' wordcount' : '')],
                 readonly: !editMode,
                 valid_elements: '*[*]',
                 toolbar_items_size: 'small',
@@ -79,10 +79,11 @@ Aspectize.Extend("TinyMCEv4", {
                         if (typeof customImage === 'string') {
                             customImageTitle = customImage;
                         }
-                        editor.addButton('customimagebutton', {
-                            title: customImageTitle,
-                            image: '../Applications/TinyMce/images/Image16Add.png',
-                            onclick: function () {
+                        editor.ui.registry.addButton('customimagebutton', {
+                            tooltip: customImageTitle,
+                            icon: 'gallery',
+                            onAction: function (_) {
+                                //editor.insertContent('&nbsp;<strong>It\'s my button!</strong>&nbsp;');
                                 var customImageLink = {
                                     callback: function (imageUrl) {
                                         if (imageUrl) {
@@ -93,8 +94,28 @@ Aspectize.Extend("TinyMCEv4", {
                                     }
                                 };
                                 Aspectize.UiExtensions.Notify(elem, 'OnCustomImage', customImageLink);
+                            },
+                            onSetup: function (buttonApi) {
+                                $('.tox').css('z-index', '1000');
                             }
                         });
+
+                        //editor.addButton('customimagebutton', {
+                        //    title: customImageTitle,
+                        //    image: '../Applications/TinyMce/images/Image16Add.png',
+                        //    onclick: function () {
+                        //        var customImageLink = {
+                        //            callback: function (imageUrl) {
+                        //                if (imageUrl) {
+                        //                    var imageDiv = '<img src="' + imageUrl + '" />';
+                        //                    editor.focus();
+                        //                    editor.selection.setContent(imageDiv);
+                        //                }
+                        //            }
+                        //        };
+                        //        Aspectize.UiExtensions.Notify(elem, 'OnCustomImage', customImageLink);
+                        //    }
+                        //});
                     }
                     var customLink = Aspectize.UiExtensions.GetProperty(elem, 'CustomLink');
 
@@ -103,10 +124,11 @@ Aspectize.Extend("TinyMCEv4", {
                         if (typeof customLink === 'string') {
                             customLinkTitle = customLink;
                         }
-                        editor.addButton('customlinkbutton', {
-                            title: customLinkTitle,
-                            image: '../Applications/TinyMce/images/DynamicLinkAdd.png',
-                            onclick: function () {
+                        editor.ui.registry.addButton('customlinkbutton', {
+                            tooltip: customLinkTitle,
+                            icon: 'link',
+                            onAction: function (_) {
+                                //editor.insertContent('&nbsp;<strong>It\'s my button!</strong>&nbsp;');
                                 var linkText = editor.selection.getContent();
                                 var customImageLink = {
                                     callback: function (linkHref, linkOnClick) {
@@ -121,6 +143,24 @@ Aspectize.Extend("TinyMCEv4", {
                                 Aspectize.UiExtensions.Notify(elem, 'OnCustomLink', customImageLink);
                             }
                         });
+                        //editor.addButton('customlinkbutton', {
+                        //    title: customLinkTitle,
+                        //    image: '../Applications/TinyMce/images/DynamicLinkAdd.png',
+                        //    onclick: function () {
+                        //        var linkText = editor.selection.getContent();
+                        //        var customImageLink = {
+                        //            callback: function (linkHref, linkOnClick) {
+                        //                var menuDiv = '<a ';
+                        //                if (linkHref) { menuDiv = menuDiv + 'href="' + linkHref + '" '; }
+                        //                if (linkOnClick) { menuDiv = menuDiv + 'onclick="' + linkOnClick + '" '; }
+                        //                menuDiv = menuDiv + '>' + linkText + '</a>';
+                        //                editor.focus();
+                        //                editor.selection.setContent(menuDiv);
+                        //            }
+                        //        };
+                        //        Aspectize.UiExtensions.Notify(elem, 'OnCustomLink', customImageLink);
+                        //    }
+                        //});
                     }
 
                     editor.on('change', function (e) { setTimeout(notifyChange, 0); });
