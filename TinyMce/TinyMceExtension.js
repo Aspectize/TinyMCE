@@ -1,4 +1,9 @@
 ﻿
+function jq(myid) {
+    return myid.replace(/(:|;|\.|\[|\])/g, "\\$1");
+}
+
+
 Aspectize.Extend("TinyMCEv4", {
     Properties: { EditMode: true, Value: '', CustomImage: '', CustomLink: '', RelativeUrls: false, Inline: false, MenuBar: false, StatusBar: false, WordCount: false, DisableIFrame: false, RemoveTrailingBrs: true },
     Events: ['OnCustomImage', 'OnCustomLink'],
@@ -11,7 +16,7 @@ Aspectize.Extend("TinyMCEv4", {
 
             elem.aasClose = function () {
 
-                tinyMCE.remove('#' + elem.id);
+                tinyMCE.remove('#' + jq(elem.id));
             };
         }
 
@@ -26,7 +31,7 @@ Aspectize.Extend("TinyMCEv4", {
                 if (editor) {
 
                     editor.save();
-                    tinyMCE.remove('#' + elem.id);
+                    tinyMCE.remove('#' + jq(elem.id));
 
                     editorCreated = false;
                 }
@@ -57,7 +62,7 @@ Aspectize.Extend("TinyMCEv4", {
             var editMode = Aspectize.UiExtensions.GetProperty(elem, 'EditMode');
             var options = {
                 language: 'fr_FR',
-                selector: '#' + elem.id,
+                selector: '#' + jq(elem.id),
                 allow_script_urls: true,
                 remove_trailing_brs: Aspectize.UiExtensions.GetProperty(elem, 'RemoveTrailingBrs'),
                 visual_table_class: editMode ? 'mce-item-table' : 'my-custom-class',
@@ -214,7 +219,7 @@ Aspectize.Extend("TinyMCEv4", {
                 if (editor) {
 
                     editor.save();
-                    tinyMCE.remove('#' + elem.id);
+                    tinyMCE.remove('#' + jq(elem.id));
                     loadTinyMCE(elem);
                 }
             }
