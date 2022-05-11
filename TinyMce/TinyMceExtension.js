@@ -26,7 +26,7 @@ Aspectize.Extend("TinyMCEv4", {
 
             if (editorCreated) {
 
-                var editor = tinyMCE.get(elem.id);
+                var editor = tinyMCE.get(jq(elem.id));
 
                 if (editor) {
 
@@ -194,11 +194,11 @@ Aspectize.Extend("TinyMCEv4", {
 
             if (!editorCreated) { loadTinyMCE(elem); editorCreated = true; }
 
-            var editor = tinyMCE.get(elem.id);
+            var editor = tinyMCE.get(jq(elem.id));
 
             var hasValue = !!arg.Value;
             var editMode = ('EditMode' in arg) ? arg.EditMode : 'no EditMode';
-            Aspectize.DebugTrace("change {2} editor has Value : {0} EditMode {1}", hasValue, editMode, editor ? 'with' : 'no');
+            //Aspectize.DebugTrace("change {2} editor has Value : {0} EditMode {1}", hasValue, editMode, editor ? 'with' : 'no');
 
             if ('Value' in arg) {
 
@@ -217,6 +217,9 @@ Aspectize.Extend("TinyMCEv4", {
             if ('EditMode' in arg) {
 
                 if (editor) {
+
+                    var args = {};
+                    args.format = 'raw';
 
                     editor.save();
                     tinyMCE.remove('#' + jq(elem.id));

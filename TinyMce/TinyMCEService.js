@@ -2,30 +2,30 @@
 
 Global.TinyMCEService = {
 
-   aasService:'TinyMCEService',
-   aasPublished:true,
-      
-   UnloadTinyMCE: function (controlName) {
+    aasService: 'TinyMCEService',
+    aasPublished: true,
 
-       if (Aspectize.Can && Aspectize.Can('aasClose')) return;
+    UnloadTinyMCE: function (controlName) {
 
-       function unloadTinyMCE() {
-           if (typeof (tinyMCE) !== 'undefined') {
-               tinymce.each(tinyMCE.editors, function (e) {
-                   if (typeof (e) !== 'undefined' && e.id == controlName) {
-                       try {
-                           tinymce.remove(e);
-                       }
-                       catch (ex) {
+        if (Aspectize.Can && Aspectize.Can('aasClose')) return;
 
-                       }
-                   }
-               });
-           }
-       }
+        function unloadTinyMCE() {
+            if (typeof (tinyMCE) !== 'undefined') {
+                tinymce.each(tinyMCE.editors, function (e) {
+                    if (typeof (e) !== 'undefined' && e.id == controlName) {
+                        try {
+                            tinymce.remove(e); //('#' + jq(e.id));
+                        }
+                        catch (ex) {
 
-       unloadTinyMCE();
-   }
+                        }
+                    }
+                });
+            }
+        }
+
+        unloadTinyMCE();
+    }
 
 };
 
