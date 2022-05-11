@@ -80,7 +80,9 @@ Aspectize.Extend("TinyMCEv4", {
                 setup: function (editor) {
 
                     editor.on('init', function (e) {
-                        editor.setContent(v);
+                        if (v) {
+                            editor.setContent(v);
+                        }
                     });
 
                     thisEditor = editor;
