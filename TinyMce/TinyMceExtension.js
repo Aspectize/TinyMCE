@@ -26,7 +26,7 @@ Aspectize.Extend("TinyMCEv4", {
 
             if (editorCreated) {
 
-                var editor = tinyMCE.get(jq(elem.id));
+                var editor = tinyMCE.get(elem.id);
 
                 if (editor) {
 
@@ -59,6 +59,7 @@ Aspectize.Extend("TinyMCEv4", {
                 }
             }
 
+            var v = Aspectize.UiExtensions.GetProperty(elem, 'Value');
             var editMode = Aspectize.UiExtensions.GetProperty(elem, 'EditMode');
             var options = {
                 language: 'fr_FR',
@@ -77,6 +78,10 @@ Aspectize.Extend("TinyMCEv4", {
                 toolbar_items_size: 'small',
                 toolbar: (!editMode) ? false : 'bold italic underline strikethrough | removeformat | alignleft aligncenter alignright alignjustify | styleselect fontselect fontsizeselect | cut copy paste pastetext pasteword | searchreplace | bullist numlist | outdent indent blockquote | undo redo | link unlink ' + ((Aspectize.UiExtensions.GetProperty(elem, 'CustomLink')) ? 'customlinkbutton ' : '') + ((Aspectize.UiExtensions.GetProperty(elem, 'CustomImage')) ? 'customimagebutton ' : '') + 'image ' + ((Aspectize.UiExtensions.GetProperty(elem, 'DisableIFrame')) ? ' ' : 'media ') + 'code | anchor | forecolor backcolor | table | hr | sub sup | charmap',
                 setup: function (editor) {
+
+                    editor.on('init', function (e) {
+                        editor.setContent(v);
+                    });
 
                     thisEditor = editor;
                     var customImage = Aspectize.UiExtensions.GetProperty(elem, 'CustomImage');
@@ -194,10 +199,10 @@ Aspectize.Extend("TinyMCEv4", {
 
             if (!editorCreated) { loadTinyMCE(elem); editorCreated = true; }
 
-            var editor = tinyMCE.get(jq(elem.id));
+            var editor = tinyMCE.get(elem.id);
 
-            var hasValue = !!arg.Value;
-            var editMode = ('EditMode' in arg) ? arg.EditMode : 'no EditMode';
+            //var hasValue = !!arg.Value;
+            //var editMode = ('EditMode' in arg) ? arg.EditMode : 'no EditMode';
             //Aspectize.DebugTrace("change {2} editor has Value : {0} EditMode {1}", hasValue, editMode, editor ? 'with' : 'no');
 
             if ('Value' in arg) {
