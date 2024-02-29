@@ -63,6 +63,234 @@
     <Content Include="images\Image16Add.png" />
     <Content Include="TinyMceExtension.js" />
     <Content Include="TinyMCEService.js" />
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\langs\fr_FR.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\license.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\advlist\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\anchor\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\autolink\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\autoresize\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\autosave\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\bbcode\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\charmap\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\code\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\colorpicker\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\contextmenu\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\directionality\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\emoticons\img\smiley-cool.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\emoticons\img\smiley-cry.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\emoticons\img\smiley-embarassed.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\emoticons\img\smiley-foot-in-mouth.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\emoticons\img\smiley-frown.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\emoticons\img\smiley-innocent.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\emoticons\img\smiley-kiss.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\emoticons\img\smiley-laughing.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\emoticons\img\smiley-money-mouth.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\emoticons\img\smiley-sealed.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\emoticons\img\smiley-smile.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\emoticons\img\smiley-surprised.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\emoticons\img\smiley-tongue-out.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\emoticons\img\smiley-undecided.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\emoticons\img\smiley-wink.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\emoticons\img\smiley-yell.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\emoticons\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\example\dialog.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\example\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\example_dependency\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\fullpage\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\fullscreen\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\hr\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\image\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\importcss\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\insertdatetime\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\layer\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\legacyoutput\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\link\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\lists\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\media\moxieplayer.swf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\media\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\nonbreaking\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\noneditable\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\pagebreak\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\paste\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\preview\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\print\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\save\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\searchreplace\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\spellchecker\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\tabfocus\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\table\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\template\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\textcolor\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\textpattern\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\visualblocks\css\visualblocks.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\visualblocks\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\visualchars\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\plugins\wordcount\plugin.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\skins\lightgray\content.inline.min.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\skins\lightgray\content.min.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\skins\lightgray\fonts\tinymce-small.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\skins\lightgray\fonts\tinymce.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\skins\lightgray\img\anchor.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\skins\lightgray\img\loader.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\skins\lightgray\img\object.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\skins\lightgray\img\trans.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\skins\lightgray\skin.ie7.min.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\skins\lightgray\skin.min.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\themes\modern\theme.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\tinymce.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinyMCEV4\js\tinymce_4.1.9\tinymce.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="tinyMCEV4\js\tinymce_4.9.11\jquery.tinymce.min.js" />
     <Content Include="tinyMCEV4\js\tinymce_4.9.11\langs\fr_FR.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -221,6 +449,24 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="tinyMCEV4\js\tinymce_4.1.9\skins\lightgray\fonts\tinymce-small.eot">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="tinyMCEV4\js\tinymce_4.1.9\skins\lightgray\fonts\tinymce-small.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="tinyMCEV4\js\tinymce_4.1.9\skins\lightgray\fonts\tinymce-small.woff">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="tinyMCEV4\js\tinymce_4.1.9\skins\lightgray\fonts\tinymce.eot">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="tinyMCEV4\js\tinymce_4.1.9\skins\lightgray\fonts\tinymce.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="tinyMCEV4\js\tinymce_4.1.9\skins\lightgray\fonts\tinymce.woff">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="tinyMCEV4\js\tinymce_4.9.11\langs\readme.md" />
     <None Include="tinyMCEV4\js\tinymce_4.9.11\skins\lightgray\fonts\tinymce-mobile.woff" />
     <None Include="tinyMCEV4\js\tinymce_4.9.11\skins\lightgray\fonts\tinymce-small.eot" />
@@ -230,8 +476,7 @@
     <None Include="tinyMCEV4\js\tinymce_4.9.11\skins\lightgray\fonts\tinymce.ttf" />
     <None Include="tinyMCEV4\js\tinymce_4.9.11\skins\lightgray\fonts\tinymce.woff" />
   </ItemGroup>
-  <ItemGroup>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Aspectize\Aspectize.Targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
