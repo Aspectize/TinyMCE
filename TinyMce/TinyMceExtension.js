@@ -47,6 +47,18 @@ Aspectize.Extend("TinyMCEv4", {
 
             var thisEditor = null;
 
+            
+            var currentLanguageAndRegion = Aspectize.CultureInfo.GetCurrentLanguageAndRegion();
+
+            var currentLanguage = 'fr_FR';
+            
+            if (currentLanguageAndRegion == 'es-ES') {
+                currentLanguage = 'es';
+            } else if (currentLanguageAndRegion == 'en-US') {
+                currentLanguage = 'en_GB';
+            }
+            
+
             function notifyChange() {
                 if (tinyMCE) {
                     var element = tinyMCE.get(elem.id);
@@ -62,7 +74,7 @@ Aspectize.Extend("TinyMCEv4", {
             var v = Aspectize.UiExtensions.GetProperty(elem, 'Value');
             var editMode = Aspectize.UiExtensions.GetProperty(elem, 'EditMode');
             var options = {
-                language: 'fr_FR',
+                language: currentLanguage,
                 selector: '#' + jq(elem.id),
                 allow_script_urls: true,
                 remove_trailing_brs: Aspectize.UiExtensions.GetProperty(elem, 'RemoveTrailingBrs'),
